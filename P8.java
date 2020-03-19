@@ -2,17 +2,16 @@ import java.util.Scanner;
 
 class Factorial {
     void findFact(int a) {
-        for (int i = 2; i <= a || a == 1; i++) {
-
-            if (a % i == 0) {
-                System.out.println(i);
+        System.out.print("factos are :- ");
+        for (int i = 2; i <= a; i++) {
+            if (a == 1)
+                break;
+            else if (a % i == 0) {
+                System.out.print(i + " ");
                 a = a / i;
                 i--;
             }
 
-            else if (a == i) {
-                System.out.println("number is prime");
-            }
         }
 
     }
@@ -27,7 +26,7 @@ public class P8 {
     public static void main(String[] args) {
         Factorial f = new Factorial();
         Scanner s = new Scanner(System.in);
-        System.out.println("enter a number:-  ");
+        System.out.print("enter a number:-  ");
         int a = s.nextInt();
         f.findFact(a);
     }
