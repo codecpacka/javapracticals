@@ -9,13 +9,17 @@ public class P15 {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a binary number/decimal no");
         String s = sc.nextLine();
+        bin2Dec(s);
+    }
+
+    static void bin2Dec(String s) {
         try {
             Integer i = Integer.parseInt(s, 2);
             System.out.println(i + "= binary equivalent");
-            // throw new NumberFormatException("not a binary string");
         } catch (NumberFormatException e) {
             System.out.println("Number format exception    " + e.getMessage());
 
         }
+
     }
 }
